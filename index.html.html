@@ -1,83 +1,478 @@
-<!-- Preheader -->
-<div style="display:none;max-height:0;overflow:hidden;font-size:1px;color:#f2f2f2;">Hay 5 pases para el ScaleExO Summit — y uno puede ser tuyo. Aplica gratis antes del sábado 25 de abril.&nbsp;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;&zwj;&zwnj;</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gana un Pase Growth — ScaleExO Summit 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:   #050D1A;
+    --navy2:  #042D3D;
+    --cyan:   #00CCCC;
+    --orange: #F26522;
+    --white:  #FFFFFF;
+    --muted:  rgba(255,255,255,0.55);
+    --card:   rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,204,204,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,204,204,0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none; z-index: 0;
+  }
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2" lang="es">
-<tbody><tr><td align="center" style="padding:20px 10px;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
-<tbody>
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(5,13,26,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em; color: var(--white); }
+  .nav-logo span { color: var(--cyan); font-size: .6em; vertical-align: super; }
+  .nav-cta {
+    background: var(--orange); color: #fff;
+    font-size: .7rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 8px 20px; border-radius: 3px; text-decoration: none;
+  }
 
-<!-- HEADER -->
-<tr><td style="background-color:#042D3D;padding:16px 24px;border-radius:8px 8px 0 0;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tbody><tr>
-    <td valign="middle">
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1;">SCALE<span style="font-size:11px;color:#00CCCC;vertical-align:super;font-weight:800;">exo</span></div>
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:7px;color:rgba(255,255,255,.35);letter-spacing:.2em;text-transform:uppercase;margin-top:2px;">Escalamiento Exponencial de Negocios</div>
-    </td>
-    <td align="right" valign="middle">
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.08em;text-transform:uppercase;">28-29 Abril · Guadalajara</div>
-    </td>
-  </tr></tbody></table>
-</td></tr>
+  /* HERO */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 100px 2rem 60px; overflow: hidden;
+  }
+  .hero-glow {
+    position: absolute; width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(0,204,204,.12) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 860px; margin: 0 auto; width: 100%;
+    text-align: center;
+  }
+
+  .prize-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(0,204,204,.1);
+    border: 1px solid rgba(0,204,204,.3);
+    padding: 8px 20px; border-radius: 100px; margin-bottom: 28px;
+  }
+  .prize-badge-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--cyan); box-shadow: 0 0 8px var(--cyan);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:.5; transform:scale(.8); }
+  }
+  .prize-badge span {
+    font-size: .72rem; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--cyan);
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.2rem, 9vw, 6.5rem);
+    line-height: .95; letter-spacing: .01em; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .hero h1 em { font-style: normal; color: var(--cyan); display: block; }
+  .hero h1 .orange { color: var(--orange); }
+
+  .hero-sub {
+    font-size: 1.05rem; font-weight: 300; color: var(--muted);
+    line-height: 1.7; max-width: 600px; margin: 20px auto 36px;
+  }
+  .hero-sub strong { color: #fff; font-weight: 500; }
+
+  /* Countdown */
+  .countdown-label {
+    font-size: .68rem; font-weight: 700; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .countdown-wrap { display: flex; justify-content: center; gap: 6px; margin-bottom: 40px; }
+  .cd-block {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 14px 20px; min-width: 72px; text-align: center;
+  }
+  .cd-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; line-height: 1; color: var(--cyan); }
+  .cd-label { font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .cd-sep { font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: rgba(255,255,255,.15); align-self: center; padding-bottom: 18px; }
+
+  /* CTAs */
+  .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: #fff;
+    font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 16px 36px; border-radius: 3px; text-decoration: none; transition: opacity .2s;
+  }
+  .btn-primary:hover { opacity: .88; }
+  .btn-ghost {
+    border: 1px solid var(--cyan); color: var(--cyan);
+    font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 16px 36px; border-radius: 3px; text-decoration: none; transition: all .2s;
+  }
+  .btn-ghost:hover { background: rgba(0,204,204,.08); }
+
+  /* SECTIONS */
+  .section { position: relative; z-index: 1; padding: 80px 2rem; }
+  .section-inner { max-width: 860px; margin: 0 auto; }
+  .label {
+    font-size: .68rem; font-weight: 700; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--cyan); margin-bottom: 10px;
+  }
+  .section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1; text-transform: uppercase; margin-bottom: 48px;
+  }
+  .section h2 em { font-style: normal; color: var(--orange); }
+
+  /* STEPS */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .step {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 28px 22px; position: relative; overflow: hidden;
+  }
+  .step::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  }
+  .step:nth-child(1)::before { background: var(--cyan); }
+  .step:nth-child(2)::before { background: var(--orange); }
+  .step:nth-child(3)::before { background: var(--cyan); }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; line-height: 1; color: rgba(255,255,255,.06); margin-bottom: 12px; }
+  .step h3 { font-size: .88rem; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+  .step p { font-size: .78rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+
+  /* PRIZE BOX */
+  .prize-section { background: var(--navy2); }
+  .prize-box {
+    border: 1px solid rgba(0,204,204,.3);
+    border-radius: 12px;
+    background: rgba(0,204,204,.05);
+    padding: 44px 40px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .prize-box::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(0,204,204,.1) 0%, transparent 60%);
+  }
+  .prize-box > * { position: relative; z-index: 1; }
+  .prize-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(5rem, 14vw, 9rem);
+    color: var(--cyan); line-height: 1;
+    margin-bottom: 0;
+    text-shadow: 0 0 60px rgba(0,204,204,.3);
+  }
+  .prize-desc {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: #fff; letter-spacing: .02em;
+    margin-bottom: 16px; line-height: 1.1;
+  }
+  .prize-desc span { color: var(--orange); }
+  .prize-sub {
+    font-size: .88rem; color: var(--muted); font-weight: 300;
+    line-height: 1.7; max-width: 500px; margin: 0 auto 28px;
+  }
+  .prize-includes {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    margin-bottom: 24px;
+  }
+  .prize-tag {
+    background: rgba(0,204,204,.1); border: 1px solid rgba(0,204,204,.2);
+    padding: 6px 14px; border-radius: 100px;
+    font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--cyan);
+  }
+  .prize-note {
+    font-size: .75rem; color: var(--muted); line-height: 1.6;
+  }
+  .prize-note strong { color: var(--orange); }
+
+  /* FORM */
+  .form-section { background: var(--navy); }
+  .form-wrap {
+    max-width: 600px; margin: 0 auto;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 48px 40px; position: relative;
+  }
+  .form-wrap::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--cyan), var(--orange));
+    border-radius: 12px 12px 0 0;
+  }
+  .form-title { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-bottom: 6px; }
+  .form-sub { font-size: .85rem; color: var(--muted); font-weight: 300; margin-bottom: 28px; line-height: 1.65; }
+  .form-embed {
+    background: rgba(0,204,204,.04);
+    border: 1px dashed rgba(0,204,204,.2);
+    border-radius: 8px; padding: 56px 24px; text-align: center;
+  }
+  .form-embed p { font-size: .78rem; color: rgba(0,204,204,.4); font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+  .form-disclaimer { font-size: .68rem; color: rgba(255,255,255,.22); text-align: center; margin-top: 20px; line-height: 1.7; }
+
+  /* SUMMIT */
+  .summit-section { background: rgba(4,45,61,.5); border-top: 1px solid var(--border); }
+  .summit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  @media (max-width: 640px) { .summit-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .summit-text h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3rem); line-height: 1; text-transform: uppercase; margin-bottom: 16px; }
+  .summit-text h2 em { font-style: normal; color: var(--cyan); }
+  .summit-text p { font-size: .9rem; color: var(--muted); line-height: 1.75; font-weight: 300; margin-bottom: 12px; }
+  .summit-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
+  .stat-n { font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--cyan); line-height: 1; }
+  .stat-l { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+  /* URGENCY */
+  .urgency { background: var(--orange); padding: 14px 2rem; text-align: center; position: relative; z-index: 1; }
+  .urgency p { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; }
+
+  /* FOOTER */
+  footer { position: relative; z-index: 1; background: #031520; padding: 28px 2rem; text-align: center; border-top: 1px solid var(--border); }
+  footer .logo { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  footer .logo span { color: var(--cyan); font-size: .6em; vertical-align: super; }
+  footer p { font-size: .7rem; color: rgba(255,255,255,.25); line-height: 1.7; }
+  footer a { color: var(--cyan); text-decoration: none; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-inner > * { animation: fadeUp .6s ease both; }
+  .hero-inner > *:nth-child(1) { animation-delay: .1s; }
+  .hero-inner > *:nth-child(2) { animation-delay: .2s; }
+  .hero-inner > *:nth-child(3) { animation-delay: .32s; }
+  .hero-inner > *:nth-child(4) { animation-delay: .44s; }
+  .hero-inner > *:nth-child(5) { animation-delay: .54s; }
+
+  @media (max-width: 480px) {
+    .form-wrap { padding: 32px 20px; }
+    .prize-box { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SCALE<span>exo</span></div>
+  <a href="#aplica" class="nav-cta">Quiero aplicar</a>
+</nav>
 
 <!-- HERO -->
-<tr><td style="background:linear-gradient(160deg,#042D3D,#031520);">
-  <div style="background-image:linear-gradient(rgba(0,204,204,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,204,204,.05) 1px,transparent 1px);background-size:44px 44px;padding:36px 24px 40px;">
-    <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;color:#00CCCC;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;">Convocatoria abierta · Solo 5 lugares</div>
-    <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:36px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:4px;">5 PASES GROWTH</div>
-    <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:36px;font-weight:900;color:#F26522;line-height:1.0;letter-spacing:-.025em;text-transform:uppercase;font-style:italic;margin-bottom:22px;">COMPLETAMENTE GRATIS.</div>
-    <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:28px;">Estamos sorteando 5 pases para el ScaleExO Summit — uno por persona. Si quieres estar en el foro de escalamiento más importante de México, levanta la mano. Si no ganas, de todas formas recibes un descuento exclusivo para asistir.</div>
-    <a href="https://TU-URL-GITHUB-PAGES.github.io/" title="Aplicar al sorteo" style="display:inline-block;background-color:#F26522;color:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:15px 36px;border-radius:3px;text-decoration:none;">QUIERO APLICAR — ES GRATIS</a>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+
+    <div class="prize-badge">
+      <div class="prize-badge-dot"></div>
+      <span>5 pases individuales · Sorteo Sáb 25 Abril · 12:00 pm hora México</span>
+    </div>
+
+    <h1>
+      ¿Quieres estar en el
+      <em>ScaleExO Summit?</em>
+      <span class="orange">Aplica gratis.</span>
+    </h1>
+
+    <p class="hero-sub">
+      El foro de escalamiento más importante de México llega a Guadalajara el 28 y 29 de abril.
+      Estamos sorteando <strong>5 pases Growth — uno por persona.</strong>
+      Aplica, y si no ganas, igual recibes un descuento exclusivo para asistir.
+    </p>
+
+    <div class="countdown-label">Cierre del sorteo en</div>
+    <div class="countdown-wrap" id="countdown">
+      <div class="cd-block"><div class="cd-num" id="cd-d">00</div><div class="cd-label">Días</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-label">Horas</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-m">00</div><div class="cd-label">Min</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-s">00</div><div class="cd-label">Seg</div></div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#aplica" class="btn-primary">Quiero aplicar — es gratis</a>
+      <a href="#el-summit" class="btn-ghost">Ver el Summit</a>
+    </div>
+
   </div>
-</td></tr>
+</section>
 
-<!-- BODY -->
-<tr><td style="background-color:#ffffff;padding:32px 24px;">
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;color:#00CCCC;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;">Cómo funciona</div>
-
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;"><tbody><tr>
-    <td style="background-color:#f7f9fa;border-left:4px solid #00CCCC;padding:14px 16px;border-radius:0 3px 3px 0;">
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;color:#00CCCC;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;">Paso 1 — Aplica gratis</div>
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#333;line-height:1.65;">Llena el formulario en 60 segundos. Nombre, WhatsApp, email y tamaño de tu empresa.</div>
-    </td>
-  </tr></tbody></table>
-
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;"><tbody><tr>
-    <td style="background-color:#f7f9fa;border-left:4px solid #F26522;padding:14px 16px;border-radius:0 3px 3px 0;">
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;color:#F26522;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;">Paso 2 — Te contactamos</div>
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#333;line-height:1.65;">Un asesor te llama por WhatsApp para confirmar tu participación en el sorteo.</div>
-    </td>
-  </tr></tbody></table>
-
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;"><tbody><tr>
-    <td style="background-color:#f7f9fa;border-left:4px solid #00CCCC;padding:14px 16px;border-radius:0 3px 3px 0;">
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;color:#00CCCC;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;">Paso 3 — Sorteo Sáb 25 de Abril · 12:00 pm</div>
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#333;line-height:1.65;">Se eligen 5 ganadores. Si no ganas, igual recibes un <strong>descuento exclusivo</strong> para adquirir tu pase.</div>
-    </td>
-  </tr></tbody></table>
-
-  <div style="text-align:center;">
-    <a href="https://TU-URL-GITHUB-PAGES.github.io/" title="Aplicar al sorteo" style="display:inline-block;background-color:#F26522;color:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:15px 36px;border-radius:3px;text-decoration:none;">APLICAR AHORA</a>
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="label">Cómo funciona</div>
+    <h2>Aplica. Te llamamos. <em>Ganas.</em></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Llena el formulario</h3>
+        <p>Nombre, WhatsApp, email y número de empleados de tu empresa. Sin pago, sin compromiso. Solo 60 segundos.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>El equipo te contacta</h3>
+        <p>Un asesor de ScaleExO te llama por WhatsApp para conocer tu empresa y confirmar que participas en el sorteo.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Sorteo el sábado 25 — ganas de cualquier forma</h3>
+        <p>Si ganas, tu pase Growth es tuyo. Si no, igual recibes un descuento exclusivo para asistir al Summit.</p>
+      </div>
+    </div>
   </div>
-</td></tr>
+</section>
 
-<!-- EVENT INFO -->
-<tr><td style="background-color:#042D3D;padding:24px 24px;">
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;color:#00CCCC;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;">El evento</div>
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.2;">ScaleExO Summit 2026</div>
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:0;line-height:1.7;">28 y 29 de Abril · PALCCO, Guadalajara&nbsp;&nbsp;·&nbsp;&nbsp;9 Speakers&nbsp;&nbsp;·&nbsp;&nbsp;2 Días&nbsp;&nbsp;·&nbsp;&nbsp;5 Pases en juego</div>
-</td></tr>
+<!-- PRIZE -->
+<section class="section prize-section">
+  <div class="section-inner">
+    <div class="label">El premio</div>
+    <h2>Lo que se sortea</h2>
+    <div class="prize-box">
+      <div class="prize-num">5</div>
+      <div class="prize-desc">Pases <span>Growth</span> — uno por persona</div>
+      <p class="prize-sub">
+        Cinco personas distintas van a ganar acceso completo al ScaleExO Summit 2026. Dos días, todos los speakers, todos los talleres. En Guadalajara.
+      </p>
+      <div class="prize-includes">
+        <span class="prize-tag">2 días completos</span>
+        <span class="prize-tag">Todos los speakers</span>
+        <span class="prize-tag">Talleres simultáneos</span>
+        <span class="prize-tag">Networking de alto nivel</span>
+        <span class="prize-tag">PALCCO · Guadalajara</span>
+        <span class="prize-tag">28 y 29 de Abril</span>
+      </div>
+      <p class="prize-note">
+        Sorteo en vivo: <strong>Sábado 25 de Abril a las 12:00 pm</strong> hora de México<br>
+        Si no ganas, recibes un descuento exclusivo para adquirir tu pase.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section form-section" id="aplica">
+  <div class="section-inner">
+    <div class="label">Aplica ahora</div>
+    <div class="form-wrap">
+      <div class="form-title">Quiero participar en el sorteo</div>
+      <p class="form-sub">
+        Aplica gratis antes del <strong style="color:var(--orange);">sábado 25 de abril.</strong>
+        Un asesor te contacta por WhatsApp para confirmar tu participación.
+        Hay <strong style="color:var(--cyan);">5 pases disponibles</strong> — uno por persona.
+      </p>
+
+      <!-- ═══════════════════════════════════════
+           PEGA AQUÍ EL EMBED DE TU FORMULARIO
+           (HubSpot / Go High Level)
+           Campos: Nombre · WhatsApp · Email · N.º de empleados
+      ═══════════════════════════════════════ -->
+      <div class="form-embed">
+        <p>Formulario — pega el embed aquí</p>
+      </div>
+      <!-- ═══════════════════════════════════════ -->
+
+      <p class="form-disclaimer">
+        Al aplicar aceptas que un asesor de ScaleExO te contacte vía WhatsApp para confirmar tu participación en el sorteo.<br>
+        Tu información no será compartida con terceros.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- THE SUMMIT -->
+<section class="section summit-section" id="el-summit">
+  <div class="section-inner">
+    <div class="label">El evento</div>
+    <div class="summit-grid">
+      <div class="summit-text">
+        <h2>El foro de escalamiento más importante de <em>México</em></h2>
+        <p>Dos días intensivos con los líderes que están redefiniendo cómo crecen las empresas en el mundo. Casos reales, metodologías probadas y networking que dura años.</p>
+        <p><strong style="color:var(--white);">28 y 29 de Abril · PALCCO, Guadalajara</strong></p>
+        <div style="margin-top:24px;">
+          <a href="#aplica" class="btn-primary" style="font-size:.72rem;padding:13px 28px;">Aplicar al sorteo — gratis</a>
+        </div>
+      </div>
+      <div class="summit-stats">
+        <div class="stat"><div class="stat-n">9</div><div class="stat-l">Speakers</div></div>
+        <div class="stat"><div class="stat-n">2</div><div class="stat-l">Días</div></div>
+        <div class="stat"><div class="stat-n">5</div><div class="stat-l">Pases en juego</div></div>
+        <div class="stat"><div class="stat-n">1</div><div class="stat-l">Ciudad</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- URGENCY -->
-<tr><td style="background-color:#F26522;padding:12px 24px;text-align:center;">
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">Sorteo Sábado 25 Abril · 12:00 pm · Solo 5 pases · Aplicar es gratis</div>
-</td></tr>
+<div class="urgency">
+  <p>Solo 5 pases · Sorteo Sáb 25 Abril 12:00 pm · PALCCO Guadalajara · Aplicar es gratis</p>
+</div>
 
 <!-- FOOTER -->
-<tr><td style="background-color:#031e2b;padding:20px 24px;text-align:center;border-radius:0 0 8px 8px;">
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight:900;color:#fff;letter-spacing:-.02em;margin-bottom:8px;">SCALE<span style="font-size:10px;color:#00CCCC;vertical-align:super;font-weight:800;">exo</span></div>
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.25);line-height:1.6;margin-bottom:4px;">© 2026 Growth Institute. All rights reserved.</div>
-  <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:10px;line-height:1.6;"><a href="https://www.growthinstitute.com/es/privacy-notice-growth-institute" style="color:#00CCCC;text-decoration:none;">Aviso de privacidad</a>&nbsp;·&nbsp;<a href="#" style="color:#00CCCC;text-decoration:none;">Cancelar suscripción</a></div>
-</td></tr>
+<footer>
+  <div class="logo">SCALE<span>exo</span></div>
+  <p>© 2026 Growth Institute. Todos los derechos reservados.<br>
+  <a href="https://www.growthinstitute.com/es/privacy-notice-growth-institute">Aviso de privacidad</a>
+  &nbsp;·&nbsp;
+  <a href="https://summit.scalexo.lat/">summit.scalexo.lat</a></p>
+</footer>
 
-</tbody></table>
-</td></tr></tbody></table>
+<script>
+  // Sorteo: Sábado 25 de Abril 2026 a las 12:00 pm hora Centro México (UTC-6)
+  const sorteoDate = new Date('2026-04-25T12:00:00-06:00');
+
+  function updateCountdown() {
+    const diff = sorteoDate - new Date();
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1.5rem;color:var(--orange);letter-spacing:.1em;text-align:center;">El sorteo ya se realizó</div>';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-d').textContent = String(d).padStart(2, '0');
+    document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
+    document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
